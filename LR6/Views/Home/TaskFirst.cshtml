@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div id="TaskFirstSolution">
+    <form method="post">
+        <p>
+            <label>Первый катет треугольника:</label>
+            <input type="text" name="FirstCatet" />
+        </p>
+        <p>
+            <label>Второй катет треугольника:</label>
+            <input type="text" name="SecondCatet" />
+        </p>
+        <p>
+            <input type="submit" value="Вычислить" />
+        </p>
+        <p>
+            <label>Гипотенуза:</label>
+            <label>@ViewBag.H</label>
+        </p>
+    </form>
+</div>
