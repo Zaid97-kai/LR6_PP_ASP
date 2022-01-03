@@ -4,8 +4,34 @@
 @{
 }
 <div>
-    <label>Редактор</label>
-    <canvas width="300" height="300">
-
-    </canvas>
+    <form method="post">
+        <div class="questionBlock">
+            <h4>
+                Вопрос 1
+            </h4><br />
+            <input type="radio" name="firstQuestion" value="11"/><label>Первый</label><br />
+            <input type="radio" name="firstQuestion" value="12"/><label>Второй</label><br />
+            <input type="radio" name="firstQuestion" value="13"/><label>Третий</label>
+        </div>
+        <div class="questionBlock">
+            <h4>
+                Вопрос 2
+            </h4><br />
+            <input type="radio" name="secondQuestion" value="21"/><label>Первый</label><br />
+            <input type="radio" name="secondQuestion" value="22"/><label>Второй</label><br />
+            <input type="radio" name="secondQuestion" value="23"/><label>Третий</label>
+        </div>
+        <div class="questionBlock">
+            <h4>
+                Вопрос 3
+            </h4><br />
+            <input type="radio" name="thirdQuestion" value="31"/><label>Первый</label><br />
+            <input type="radio" name="thirdQuestion" value="32"/><label>Второй</label><br />
+            <input type="radio" name="thirdQuestion" value="33"/><label>Третий</label>
+        </div>
+        <div>
+            <input type="submit" value="Проверить"/>
+        </div>
+    </form>
+    <p id="resultTest">Правильных ответов: @ViewBag.Result</p>
 </div>

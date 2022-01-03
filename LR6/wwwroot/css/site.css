@@ -16,3 +16,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.questionBlock
+{
+    border: dotted 2px black;
+    width: 50%;
+}

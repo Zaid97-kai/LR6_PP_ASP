@@ -7,6 +7,7 @@ namespace LR6.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private int _counter = 0;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -36,6 +37,30 @@ namespace LR6.Controllers
         public IActionResult TaskFirst(string FirstCatet, string SecondCatet)
         {
             ViewBag.H = Convert.ToInt32(FirstCatet) * Convert.ToInt32(SecondCatet);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult TaskSecond(string firstQuestion, string secondQuestion, string thirdQuestion)
+        {
+            if(firstQuestion == null || secondQuestion == null || thirdQuestion == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            if(firstQuestion == "12")
+            {
+                _counter++;
+            }
+            if(secondQuestion == "23")
+            {
+                _counter++;
+            }
+            if(thirdQuestion == "31")
+            {
+                _counter++;
+            }
+
+            ViewBag.Result = Convert.ToInt32(_counter);
             return View();
         }
 
